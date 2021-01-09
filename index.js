@@ -179,7 +179,7 @@ app.delete("series/:id", (req, res) => {
 
 // DELETE - Delete all entities where boolean value is false
 
-app.delete("/series/not_bilingual", (req, res) => {
+app.delete("/series/not_watched", (req, res) => {
   connection.query(
     "DELETE FROM series WHERE watched = 0", (err, results) => {
       if (err) {
